@@ -1,0 +1,32 @@
+.full-width-container {
+    width: 100%;
+    height: 150vh;
+    overflow-x: hidden;
+    background-color: black;
+    /* margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%); */
+    
+    padding: 0;
+    margin: 0;
+    
+}
+/* Inside your CSS file */
+.arrow-button {
+    color: green;
+    /* Make the arrow green */
+    font-size: 5em;
+    /* Increase the font size */
+    background-color: transparent;
+    /* Set background color to transparent */
+    border: none;
+    /* Remove border */
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
