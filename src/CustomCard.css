@@ -1,0 +1,27 @@
+.custom-card {
+   
+    
+        /* Add a transparent border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Add a subtle gray shadow */
+        transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        /* Add transition for transform and border-color */
+    }
+    
+    .custom-card:hover {
+        transform: scale(1.08);
+       
+        box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5);
+            /* Add a white shadow with animation */
+            transition: box-shadow 0.5s ease-in-out;
+    }
+
+
+
+
+
+
+.custom-card .card-footer button:hover {
+    background-color: green;
+    color: white;
+}

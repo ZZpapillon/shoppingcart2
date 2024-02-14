@@ -1,15 +1,14 @@
-.full-width-container {
+/* .full-width-container {
     width: 100%;
-    height: 150vh;
-    overflow-x: hidden;
+    height: 1500px;
+   
     background-color: black;
-    /* margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%); */
-    
+  
+    overflow-y: auto;
     padding: 0;
     margin: 0;
     
-}
+} */
 /* Inside your CSS file */
 .arrow-button {
     color: green;
@@ -29,4 +28,97 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.image-placeholder {
+    width: 95%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.image-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-button {
+    display: none!important;
+   
+}
+.arrow-button:hover {
+    color: lime !important;
+
+    /* Show the arrow buttons when hovering over the CardPlacer */
+}
+
+.card-placer:hover .arrow-button {
+    display: inline-block!important;
+    
+    /* Show the arrow buttons when hovering over the CardPlacer */
+}
+
+
+.image-slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-slider-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.strijele {
+    color: green!important;
+    font-size: 2em!important;
+    background-color: transparent!important;
+    border: none!important;
+}
+
+.strijele:hover {
+    color: lime!important;
+}
+
+.strijele:first-of-type {
+    left: 0!important;
+}
+
+.strijele:last-of-type {
+    right: 0!important;
+}
+
+/* shop.css */
+.circle-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.circle.active {
+    background-color: green;
+}
+
+/* shop.css */
+.image-slider-container {
+    width: 90.5%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 60px;
 }

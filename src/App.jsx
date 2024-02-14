@@ -1,5 +1,5 @@
 import React, { useState , useEffect} from 'react';
-import { Navbar, Nav, Container, Button, Toast } from 'react-bootstrap';
+import { Navbar, Nav, Row, Col, Container, Button, Toast } from 'react-bootstrap';
 import { NavLink, Outlet } from 'react-router-dom'; // Import NavLink from 'react-router-dom'
 import './Navbar.css'; // Import CSS file for styling
 import ShoppingCart from './Cart';
@@ -7,12 +7,16 @@ import CustomCard from './Components/Cards';
 import CardPlacer from './Components/CardPlacer';
 import Shop from './Components/Shop';
 import CartContext from './CartContext'
+import { CartFill, ExclamationCircleFill } from 'react-bootstrap-icons';
+
+
 
 
 function App() {
   const [showShoppingCart, setShowShoppingCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [showToast, setShowToast] = useState(false);
+  const [shakeCart, setShakeCart] = useState(false);
 
   const handleDeleteItem = (index) => {
     const updatedCartItems = [...cartItems];
@@ -23,12 +27,21 @@ function App() {
   const handleClearCart = () => {
   setCartItems([]);
 };
+const handleAddToCart = (item) => {
+  const existingItemIndex = cartItems.findIndex((cartItem) => cartItem.title === item.title);
+  if (existingItemIndex !== -1) {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[existingItemIndex].quantity++;
+    setCartItems(updatedCartItems);
+  } else {
+    setCartItems([...cartItems, { ...item, quantity: 1 }]);
+  }
+  setShakeCart(true);
+    setTimeout(() => setShakeCart(false), 1000);
+};
 
-  const handleAddToCart = (item, quantity = 1) => {
-    // Add the item to the cartItems array with the specified quantity
-    const newItem = { ...item, quantity };
-    setCartItems([...cartItems, newItem]);
-  };
+
+
   const handleShoppingCartClick = () => {
     setShowShoppingCart(true);
   };
@@ -51,26 +64,48 @@ function App() {
 
   return (
     <CartContext.Provider value={{ onAddToCart: handleAddToCart }}>
-      <Navbar expand="lg" className="custom-navbar">
-        <Container>
-          <NavLink to="" style={{ color: 'white', fontSize: '1.5em' }}>Razer</NavLink>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav>
-              <NavLink to="/shop" className="nav-link">Shop</NavLink>
-              <NavLink to="/aboutus" className="nav-link">About Us</NavLink>
-              <NavLink to="/contact" className="nav-link">Contact</NavLink>
-              <Button variant="link" className="nav-link" onClick={handleShoppingCartClick}>Shopping Cart</Button>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+  <Navbar expand="lg" className="custom-navbar green-border fixed-top">
+  <Container fluid className="kontenjer">
+    <Row className="w-100">
+      <Col xs={6} md={4}>
+        <div className="navbar-brand">
+          <NavLink to="">
+            <img src="../public/razerHeader.jpeg" alt="Razer" className="logo-img" />
+          </NavLink>
+        </div>
+      </Col>
+      <Col xs={6} md={8} className="text-end">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="collapsed-button" />
+
+        <Navbar.Collapse id="basic-navbar-nav" className="navM justify-content-end">
+          <Nav>
+            <NavLink to="/shop" className="nav-link">Shop</NavLink>
+            <NavLink to="/aboutus" className="nav-link">About Us</NavLink>
+            <NavLink to="/contact" className="nav-link">Contact</NavLink>
+          </Nav>
+          <Button variant="link" onClick={handleShoppingCartClick}>
+            <CartFill className={`green-cart ${shakeCart ? 'shake' : ''}`} size={22} />
+              {cartItems.length > 0 && <ExclamationCircleFill className="cart-notification" style={{ fontSize: '20px', color: 'red', marginBottom: '1.5vh' }} />}          
+          </Button>
+        </Navbar.Collapse>
+      </Col>
+    </Row>
+  </Container>
+</Navbar>
+
+
+
+
+
+
+
+
 
       <Outlet  />
 
-      <footer className="footer py-0">
+      <footer className="footer pt-1">
         <Container>
-          <p className="text-center text-white">@ZdeslavZaksek</p>
+          <h5 className="text-center text-white">@ZdeslavZaksek</h5>
         </Container>
       </footer>
 

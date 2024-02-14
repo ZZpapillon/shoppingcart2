@@ -1,49 +1,120 @@
 .custom-navbar {
     
     /* Align items to the ends */
-    background: linear-gradient(to top, #000000, #003914);
+    background: black;
     /* Gradient background */
-    color: #25ff99!;
+    border-bottom: 1px solid green;
     /* Text color */
     font-weight: 400;
     font-size: large;
-    /* Font weight */
+    padding: 0!important;
+    margin: 0!important;
+    
 }
-
+.green-border {
+    border-bottom: 1px solid green;
+   
+}
 .nav-link {
     color: white !important;
     margin-right: 15px;
+    
+    
+}
+.navM {
+    margin-top: 1.5vh;
 }
 
+.collapsed-button {
+    margin-top: 1.5vh;
+    /* Add margin to the right */
+    background-color: rgb(1, 1, 1)!important;
+    /* Set the background color to white */
+    border: 1px solid rgb(62, 62, 62)!important;
+    /* Remove the border */
+}
+
+.navbar-brand {
+    margin-left: 35px;
+    /* Adjust the margin to increase the space between the logo and the navigation links */
+}
 .nav-link.active {
-    color: red !important;
+    color: green !important;
     /* Other styles for the active link */
+}
+.green-cart {
+    color: green;
+}
+
+.logo-img {
+    object-fit: contain;
+    /* Keeps the aspect ratio of the logo */
+    height: 6vh;
+    /* Set the desired height */
+    width: auto;
+    /* Allow the width to adjust according to the height */
 }
 
 
 .footer {
-    background: linear-gradient(to bottom, #003914, black);
+    background-color: black;
+    border-top: 1px solid green;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 
+.shop {
+    width: 100%;
+        height: calc(100vh - 6vh);
+        /* Or any desired height */
+        overflow: scroll;
+        /* Enable vertical scrolling */
+        background-color: black;
+        padding: 0;
+        margin-top: 6vh;
+        
+scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: rgb(0, 36, 0) black;
+    /* thumb and track colors */
+}
+
+.shop::-webkit-scrollbar {
+    width: 10px;
+    /* Set the width of the scrollbar */
+}
+
+.shop::-webkit-scrollbar-thumb {
+    background-color: green;
+    /* Set the color of the scrollbar thumb */
+    border-radius: 5px;
+    /* Add rounded corners to the thumb */
+}
+
+.shop::-webkit-scrollbar-track {
+    background-color: black;
+    /* Set the color of the scrollbar track */
+}
 
 
 html,
 body {
-    height: 100%;
+    overflow: hidden;
     margin: 0;
+    background-color: black!important;
+   
+    
 }
 
 .video-background {
     position: fixed;
-    top: 60px;
+    top: 58.77px;
     /* Height of the header */
-    bottom: 30px;
+    
     /* Height of the footer */
     left: 0;
     width: 100%;
@@ -52,7 +123,7 @@ body {
 
 .video-background video {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 24px - 58.77px);
     object-fit: cover;
     /* Ensures video covers entire container */
 }
@@ -70,4 +141,104 @@ body {
     
     
     /* Adjust margin as needed */
+}
+
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vh;
+    height: 100vh;
+    /* Subtract the heights of navbar and footer */
+    background-color: black;
+    /* Set background color to black */
+    overflow-y: auto;
+    /* Enable vertical scrolling when content exceeds viewport */
+}
+
+.contact-content {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2em;
+    padding-right: 2em;
+    /* Add padding to both sides */
+    
+    /* Adjust bottom padding */
+}
+
+.contact-form {
+    width: 20px;
+    /* Adjust form width as needed */
+}
+ .form-control {
+     width: 80%!important;
+     /* Make form inputs full width on smaller screens */
+ }
+@media (max-width: 768px) {
+    .contact-form {
+        width: 10%!important;
+        /* Reduce form width on smaller screens */
+    }
+
+    .form-control {
+        width: 70%!important;
+        /* Make form inputs full width on smaller screens */
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    
+    /* Adjust form group margin */
+}
+
+.form-label {
+    color: white;
+    
+    /* Set form label text color */
+}
+
+.toast-container {
+    position: fixed;
+    top: 80vh;
+    left: 5vw;
+    z-index: 9999;
+    /* Ensure the toast appears on top of other content */
+}
+
+
+/* Shake animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(10px);
+    }
+
+    60% {
+        transform: translateX(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Apply the shake animation when the 'shake' class is present */
+.shake {
+    animation: shake 0.5s;
 }

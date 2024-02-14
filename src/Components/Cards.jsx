@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button,  } from 'react-bootstrap';
+import '../CustomCard.css'
 
 const CustomCard = ({ title, description, price, imgSrc,onAddToCart }) => {
   
@@ -10,7 +11,7 @@ const CustomCard = ({ title, description, price, imgSrc,onAddToCart }) => {
   
     return (
     
-            <Card style={{ width: '18rem', height: '32.1rem', backgroundColor: '#141414' }}>
+            <Card  className='custom-card'style={{ width: '18rem', height: '32.1rem', backgroundColor: '#141414' }}>
         <Card.Img style={{ width: '18rem', height: '17rem' }} variant="top" src={imgSrc} />
         <Card.Body className='d-flex flex-column align-items-center' style={{ backgroundColor: '#222222' }}>
           <div className='text-center'>
@@ -19,7 +20,7 @@ const CustomCard = ({ title, description, price, imgSrc,onAddToCart }) => {
           </div>
           <div className='mt-auto d-flex justify-content-between align-items-center w-100'>
             <p className='mt-3' style={{ color: 'white' }}>Price: €{price}</p>
-            <Button onClick={handleAddToCart} variant="success" style={{ color: 'black' }}>Buy</Button>
+            <Button onClick={handleAddToCart} variant="success" style={{ color: 'black', fontSize: '1.1em', fontWeight:'bold' }}>Buy</Button>
           </div>
         </Card.Body>
       </Card>
