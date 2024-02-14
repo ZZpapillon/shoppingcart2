@@ -70,7 +70,7 @@ const handleAddToCart = (item) => {
       <Col xs={6} md={4}>
         <div className="navbar-brand">
           <NavLink to="">
-            <img src="/public/razerHeader.jpeg" alt="Razer" className="logo-img" />
+            <img src="/razerHeader.jpeg" alt="Razer" className="logo-img" />
           </NavLink>
         </div>
       </Col>
