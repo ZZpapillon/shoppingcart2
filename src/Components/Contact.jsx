@@ -54,7 +54,7 @@ const Contact = () => {
           </Col>
           <Col lg={6}>
             <img
-              src="../public/razerContact.png"
+              src="/public/razerContact.png"
               alt="Contact Us Image"
               style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px', marginTop: '20px' }}
             />

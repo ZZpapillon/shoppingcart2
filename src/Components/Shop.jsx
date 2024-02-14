@@ -11,7 +11,7 @@ const Shop = () => {
     const { onAddToCart } = useContext(CartContext);
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ['../public/imageBack.webp', '../public/background2.webp', '../public/background3.webp', '../public/background4.webp'];
+  const images = ['/public/imageBack.webp', '/public/background2.webp', '/public/background3.webp', '/public/background4.webp'];
 
    const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
@@ -38,7 +38,7 @@ const Shop = () => {
       </Col>
       <Col className="d-flex justify-content-end align-items-center">
         <img
-          src="../public/razerlogo.gif"
+          src="/public/razerlogo.gif"
           alt="Rotating GIF"
           style={{
             width: '60%', // Adjust the width to make it smaller

@@ -36,7 +36,7 @@ const AboutUs = () => {
           <Col md={4} className="d-flex align-items-center justify-content-center">
             <img
             
-              src="../public/razerTeam.jpeg"
+              src="/public/razerTeam.jpeg"
               alt="About Us Image"
               className="img-fluid larger-image"
             />
