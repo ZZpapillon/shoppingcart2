@@ -30,17 +30,17 @@ const CardPlacer = ({ onAddToCart }) => {
 
   // Example card data
   const cardData = [
-    { title: 'New Razer Blade 14', description: 'Ultra-powerful, ultra-portable 14-inch gaming laptop with AMD Ryzen™ 9 8945HS processor and NVIDIA® GeForce RTX™ 40 Series graphics', price: '2,499.99', imgSrc: '/public/jedan.png' },
-    { title: 'New Razer Blade 16', description: 'High-Performance 16” Gaming Laptop with 240 Hz OLED display', price: '3,499.99', imgSrc: '/public/dva.png' },
-    { title: 'Razer Basilisk V3 Pro - Black', description: 'Customizable Wireless Gaming Mouse with Razer HyperScroll Tilt Wheel', price: '179.99', imgSrc: '/public/tri.png' },
-    { title: 'Razer BlackWidow V4 75%', description: 'Hot-swappable Mechanical Gaming Keyboard', price: '219.99', imgSrc: '/public/cetiri.png' },
-    { title: 'Razer USB-C Dock', description: '11-Port USB-C Dock', price: '139.99', imgSrc: '/public/pet.png' },
-    { title: 'Razer Iskur V2 - Dark Gray Fabric', description: 'Gaming Chair with Adaptive Lumbar Support', price: '699.99', imgSrc: '/public/sest.png' },
-    { title: 'Razer Kraken V3 Pro', description: 'Wireless Gaming Headset with Haptic Technology', price: '239.99', imgSrc: '/public/sedam.png' },
-    { title: 'Razersuperfuture Matte Black Glasses', description: 'Photochromic Glasses with Blue Light Protection', price: '249.00', imgSrc: '/public/osam.png' },
-    { title: 'Razer Naga Left-Handed Edition', description: 'Ergonomic MMO Gaming Mouse for Left-Handed Users', price: '109.99', imgSrc: '/public/devet.png' },
-    { title: 'Razer Blade 17 - QHD 240Hz - GeForce RTX 3060 - Black', description: 'Desktop Replacement Laptop with 12th Gen Processors', price: '3,799.99', imgSrc: '/public/deset.png' },
-     { title: 'Razer x *A Bathing Ape® Opus', description: 'Wireless THX® Certified Headphones with Advanced Active Noise Cancellation', price: '299.99', imgSrc: '/public/jedanest.png' },
+    { title: 'New Razer Blade 14', description: 'Ultra-powerful, ultra-portable 14-inch gaming laptop with AMD Ryzen™ 9 8945HS processor and NVIDIA® GeForce RTX™ 40 Series graphics', price: '2,499.99', imgSrc: '/jedan.png' },
+    { title: 'New Razer Blade 16', description: 'High-Performance 16” Gaming Laptop with 240 Hz OLED display', price: '3,499.99', imgSrc: '/dva.png' },
+    { title: 'Razer Basilisk V3 Pro - Black', description: 'Customizable Wireless Gaming Mouse with Razer HyperScroll Tilt Wheel', price: '179.99', imgSrc: '/tri.png' },
+    { title: 'Razer BlackWidow V4 75%', description: 'Hot-swappable Mechanical Gaming Keyboard', price: '219.99', imgSrc: '/cetiri.png' },
+    { title: 'Razer USB-C Dock', description: '11-Port USB-C Dock', price: '139.99', imgSrc: '/pet.png' },
+    { title: 'Razer Iskur V2 - Dark Gray Fabric', description: 'Gaming Chair with Adaptive Lumbar Support', price: '699.99', imgSrc: '/sest.png' },
+    { title: 'Razer Kraken V3 Pro', description: 'Wireless Gaming Headset with Haptic Technology', price: '239.99', imgSrc: '/sedam.png' },
+    { title: 'Razersuperfuture Matte Black Glasses', description: 'Photochromic Glasses with Blue Light Protection', price: '249.00', imgSrc: '/osam.png' },
+    { title: 'Razer Naga Left-Handed Edition', description: 'Ergonomic MMO Gaming Mouse for Left-Handed Users', price: '109.99', imgSrc: '/devet.png' },
+    { title: 'Razer Blade 17 - QHD 240Hz - GeForce RTX 3060 - Black', description: 'Desktop Replacement Laptop with 12th Gen Processors', price: '3,799.99', imgSrc: '/deset.png' },
+     { title: 'Razer x *A Bathing Ape® Opus', description: 'Wireless THX® Certified Headphones with Advanced Active Noise Cancellation', price: '299.99', imgSrc: '/jedanest.png' },
     // Add more card data here as needed
   ];
 
