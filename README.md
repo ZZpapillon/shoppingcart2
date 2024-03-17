@@ -26,7 +26,7 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository
    ```sh
-  git clone https://github.com/ZZpapillon/shoppingcart2.git
+   git clone https://github.com/ZZpapillon/shoppingcart2.git
    ```
 2. Navigate to the project directory
    ```sh
@@ -60,4 +60,4 @@ This project was inspired by the innovative design and technology of Razer produ
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
