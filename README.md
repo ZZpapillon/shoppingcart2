@@ -1,10 +1,11 @@
 # Razer Store
+[![Product Name Screen Shot](https://img.youtube.com/vi/VgDdNdDa4oo/0.jpg)](https://www.youtube.com/watch?v=VgDdNdDa4oo)
 
 The Razer Store is a sleek, user-friendly e-commerce platform designed to provide an exceptional shopping experience for Razer product enthusiasts. This project showcases a full-featured shopping cart, product browsing, and a seamless checkout process.
 
 ## Live Demo
 
-Check out the live demo here: <a href="https://shoppingcart2-753g.vercel.app/" target="_blank">Live Website</a>
+Check out the live demo here: [Live Website](https://shoppingcart2-753g.vercel.app/) (Note: clicking will navigate away from this page)
 
 ## Video Walkthrough
 
